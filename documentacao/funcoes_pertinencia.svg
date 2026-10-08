@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="720" viewBox="0 0 800 720" role="img" aria-labelledby="title desc">
+  <title id="title">Funções de pertinência do controlador EstufaFuzzy</title>
+  <desc id="desc">Gráficos dos conjuntos fuzzy de erro, tendência e saídas.</desc>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #202124; }
+    .title { font-size: 18px; font-weight: 700; }
+    .axis { stroke: #5f6368; stroke-width: 1.2; }
+    .grid { stroke: #dadce0; stroke-width: 1; stroke-dasharray: 3 4; }
+    .tick { font-size: 11px; fill: #5f6368; }
+    .legend { font-size: 11px; }
+    .curve { fill: none; stroke-width: 3; stroke-linejoin: round; }
+  </style>
+  <rect width="800" height="720" fill="#ffffff"/>
+
+  <g transform="translate(0,0)">
+    <text class="title" x="50" y="25">Erro = setpoint − temperatura (°C)</text>
+    <line class="grid" x1="50" y1="40" x2="750" y2="40"/>
+    <line class="grid" x1="50" y1="115" x2="750" y2="115"/>
+    <line class="axis" x1="50" y1="190" x2="750" y2="190"/>
+    <line class="axis" x1="50" y1="40" x2="50" y2="190"/>
+    <text class="tick" x="22" y="44">1,0</text><text class="tick" x="22" y="119">0,5</text><text class="tick" x="31" y="194">0</text>
+    <text class="tick" x="43" y="207">−10</text><text class="tick" x="216" y="207">−5</text><text class="tick" x="397" y="207">0</text><text class="tick" x="572" y="207">5</text><text class="tick" x="741" y="207">10</text>
+    <path class="curve" stroke="#d93025" d="M50 40 L120 40 L260 190"/>
+    <path class="curve" stroke="#f29900" d="M120 190 L277.5 40 L382.5 190"/>
+    <path class="curve" stroke="#188038" d="M365 190 L386 40 L414 40 L435 190"/>
+    <path class="curve" stroke="#1a73e8" d="M417.5 190 L522.5 40 L680 190"/>
+    <path class="curve" stroke="#9334e6" d="M540 190 L680 40 L750 40"/>
+    <g class="legend">
+      <text x="55" y="222" fill="#d93025">■ muito quente</text>
+      <text x="175" y="222" fill="#f29900">■ quente</text>
+      <text x="265" y="222" fill="#188038">■ ideal</text>
+      <text x="335" y="222" fill="#1a73e8">■ frio</text>
+      <text x="395" y="222" fill="#9334e6">■ muito frio</text>
+    </g>
+  </g>
+
+  <g transform="translate(0,240)">
+    <text class="title" x="50" y="25">Tendência = T(k) − T(k−1) (°C/amostra)</text>
+    <line class="grid" x1="50" y1="40" x2="750" y2="40"/>
+    <line class="grid" x1="50" y1="115" x2="750" y2="115"/>
+    <line class="axis" x1="50" y1="190" x2="750" y2="190"/>
+    <line class="axis" x1="50" y1="40" x2="50" y2="190"/>
+    <text class="tick" x="22" y="44">1,0</text><text class="tick" x="22" y="119">0,5</text><text class="tick" x="31" y="194">0</text>
+    <text class="tick" x="42" y="207">−1,0</text><text class="tick" x="215" y="207">−0,5</text><text class="tick" x="397" y="207">0</text><text class="tick" x="569" y="207">0,5</text><text class="tick" x="741" y="207">1,0</text>
+    <path class="curve" stroke="#1a73e8" d="M50 40 L190 40 L347.5 190"/>
+    <path class="curve" stroke="#188038" d="M295 190 L372 40 L428 40 L505 190"/>
+    <path class="curve" stroke="#d93025" d="M452.5 190 L610 40 L750 40"/>
+    <g class="legend">
+      <text x="55" y="222" fill="#1a73e8">■ esfriando</text>
+      <text x="155" y="222" fill="#188038">■ estável</text>
+      <text x="240" y="222" fill="#d93025">■ aquecendo</text>
+    </g>
+  </g>
+
+  <g transform="translate(0,480)">
+    <text class="title" x="50" y="25">Aquecimento e resfriamento (%)</text>
+    <line class="grid" x1="50" y1="40" x2="750" y2="40"/>
+    <line class="grid" x1="50" y1="115" x2="750" y2="115"/>
+    <line class="axis" x1="50" y1="190" x2="750" y2="190"/>
+    <line class="axis" x1="50" y1="40" x2="50" y2="190"/>
+    <text class="tick" x="22" y="44">1,0</text><text class="tick" x="22" y="119">0,5</text><text class="tick" x="31" y="194">0</text>
+    <text class="tick" x="47" y="207">0</text><text class="tick" x="218" y="207">25</text><text class="tick" x="393" y="207">50</text><text class="tick" x="568" y="207">75</text><text class="tick" x="740" y="207">100</text>
+    <path class="curve" stroke="#5f6368" d="M50 40 L134 190"/>
+    <path class="curve" stroke="#1a73e8" d="M85 190 L225 40 L365 190"/>
+    <path class="curve" stroke="#f29900" d="M260 190 L435 40 L610 190"/>
+    <path class="curve" stroke="#d93025" d="M505 190 L680 40 L750 40"/>
+    <g class="legend">
+      <text x="55" y="222" fill="#5f6368">■ desligado</text>
+      <text x="150" y="222" fill="#1a73e8">■ fraco</text>
+      <text x="225" y="222" fill="#f29900">■ médio</text>
+      <text x="305" y="222" fill="#d93025">■ forte</text>
+    </g>
+  </g>
+</svg>
